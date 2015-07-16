@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1487FD521B4F392C004E1874 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487FD511B4F392C004E1874 /* AppDelegate.swift */; };
-		1487FD541B4F392C004E1874 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487FD531B4F392C004E1874 /* ViewController.swift */; };
+		1418D01F1B580FDE00F2386C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1418D01E1B580FDE00F2386C /* Default-568h@2x.png */; };
+		143059841B571207004C89DB /* addEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059781B571207004C89DB /* addEventViewController.swift */; };
+		143059851B571207004C89DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059791B571207004C89DB /* AppDelegate.swift */; };
+		143059861B571207004C89DB /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597A1B571207004C89DB /* BlogViewController.swift */; };
+		143059871B571207004C89DB /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597B1B571207004C89DB /* ConversationListViewController.swift */; };
+		143059881B571207004C89DB /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597C1B571207004C89DB /* ConversationViewController.swift */; };
+		143059891B571207004C89DB /* LayerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597D1B571207004C89DB /* LayerClient.swift */; };
+		1430598A1B571207004C89DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597E1B571207004C89DB /* MainViewController.swift */; };
+		1430598B1B571207004C89DB /* ParticipantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430597F1B571207004C89DB /* ParticipantTableViewController.swift */; };
+		1430598C1B571207004C89DB /* PFUser+ATLParticipant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059801B571207004C89DB /* PFUser+ATLParticipant.swift */; };
+		1430598D1B571207004C89DB /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059811B571207004C89DB /* profileViewController.swift */; };
+		1430598E1B571207004C89DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059821B571207004C89DB /* UserManager.swift */; };
+		1430598F1B571207004C89DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059831B571207004C89DB /* ViewController.swift */; };
 		1487FD571B4F392C004E1874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD551B4F392C004E1874 /* Main.storyboard */; };
 		1487FD591B4F392C004E1874 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD581B4F392C004E1874 /* Images.xcassets */; };
 		1487FD5C1B4F392C004E1874 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD5A1B4F392C004E1874 /* LaunchScreen.xib */; };
 		1487FD681B4F392C004E1874 /* Cell_TapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487FD671B4F392C004E1874 /* Cell_TapTests.swift */; };
+		B9CF007CEBF58D34270E3BEF /* libPods-Cell Tap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FC693D14F0AAB65629D396 /* libPods-Cell Tap.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +38,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1487FD4C1B4F392C004E1874 /* Cell Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cell Tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1418D01E1B580FDE00F2386C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		143059781B571207004C89DB /* addEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addEventViewController.swift; sourceTree = "<group>"; };
+		143059791B571207004C89DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1430597A1B571207004C89DB /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		1430597B1B571207004C89DB /* ConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
+		1430597C1B571207004C89DB /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		1430597D1B571207004C89DB /* LayerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerClient.swift; sourceTree = "<group>"; };
+		1430597E1B571207004C89DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1430597F1B571207004C89DB /* ParticipantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewController.swift; sourceTree = "<group>"; };
+		143059801B571207004C89DB /* PFUser+ATLParticipant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PFUser+ATLParticipant.swift"; sourceTree = "<group>"; };
+		143059811B571207004C89DB /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		143059821B571207004C89DB /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		143059831B571207004C89DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1487FD4C1B4F392C004E1874 /* EventMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1487FD501B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1487FD511B4F392C004E1874 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1487FD531B4F392C004E1874 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1487FD561B4F392C004E1874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1487FD581B4F392C004E1874 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1487FD5B1B4F392C004E1874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1487FD611B4F392C004E1874 /* Cell TapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cell TapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1487FD611B4F392C004E1874 /* EventMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1487FD661B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487FD671B4F392C004E1874 /* Cell_TapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell_TapTests.swift; sourceTree = "<group>"; };
+		14A9BA8F1B570F65005CA84B /* Cell Tap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cell Tap-Bridging-Header.h"; sourceTree = "<group>"; };
+		6CCFFCAF58389C1C125E6FD1 /* Pods-Cell Tap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell Tap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cell Tap/Pods-Cell Tap.debug.xcconfig"; sourceTree = "<group>"; };
+		8D2E7E30A1313C6011D5D3CC /* Pods-Cell Tap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell Tap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cell Tap/Pods-Cell Tap.release.xcconfig"; sourceTree = "<group>"; };
+		90FC693D14F0AAB65629D396 /* libPods-Cell Tap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cell Tap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CF007CEBF58D34270E3BEF /* libPods-Cell Tap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,20 +84,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143059901B571242004C89DB /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1430597D1B571207004C89DB /* LayerClient.swift */,
+				1430597B1B571207004C89DB /* ConversationListViewController.swift */,
+				1430597C1B571207004C89DB /* ConversationViewController.swift */,
+				1430597F1B571207004C89DB /* ParticipantTableViewController.swift */,
+				143059801B571207004C89DB /* PFUser+ATLParticipant.swift */,
+				143059821B571207004C89DB /* UserManager.swift */,
+				143059831B571207004C89DB /* ViewController.swift */,
+			);
+			name = Layer;
+			sourceTree = "<group>";
+		};
 		1487FD431B4F392C004E1874 = {
 			isa = PBXGroup;
 			children = (
+				1418D01E1B580FDE00F2386C /* Default-568h@2x.png */,
 				1487FD4E1B4F392C004E1874 /* Cell Tap */,
 				1487FD641B4F392C004E1874 /* Cell TapTests */,
 				1487FD4D1B4F392C004E1874 /* Products */,
+				854100A246FAB61A29DDC8D7 /* Pods */,
+				8ADD66A1E7B4C154191D14F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1487FD4D1B4F392C004E1874 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1487FD4C1B4F392C004E1874 /* Cell Tap.app */,
-				1487FD611B4F392C004E1874 /* Cell TapTests.xctest */,
+				1487FD4C1B4F392C004E1874 /* EventMe.app */,
+				1487FD611B4F392C004E1874 /* EventMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +122,17 @@
 		1487FD4E1B4F392C004E1874 /* Cell Tap */ = {
 			isa = PBXGroup;
 			children = (
-				1487FD511B4F392C004E1874 /* AppDelegate.swift */,
-				1487FD531B4F392C004E1874 /* ViewController.swift */,
+				143059781B571207004C89DB /* addEventViewController.swift */,
+				143059791B571207004C89DB /* AppDelegate.swift */,
+				1430597A1B571207004C89DB /* BlogViewController.swift */,
+				143059901B571242004C89DB /* Layer */,
+				1430597E1B571207004C89DB /* MainViewController.swift */,
+				143059811B571207004C89DB /* profileViewController.swift */,
 				1487FD551B4F392C004E1874 /* Main.storyboard */,
 				1487FD581B4F392C004E1874 /* Images.xcassets */,
 				1487FD5A1B4F392C004E1874 /* LaunchScreen.xib */,
 				1487FD4F1B4F392C004E1874 /* Supporting Files */,
+				14A9BA8F1B570F65005CA84B /* Cell Tap-Bridging-Header.h */,
 			);
 			path = "Cell Tap";
 			sourceTree = "<group>";
@@ -112,29 +162,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		854100A246FAB61A29DDC8D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CCFFCAF58389C1C125E6FD1 /* Pods-Cell Tap.debug.xcconfig */,
+				8D2E7E30A1313C6011D5D3CC /* Pods-Cell Tap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8ADD66A1E7B4C154191D14F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90FC693D14F0AAB65629D396 /* libPods-Cell Tap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1487FD4B1B4F392C004E1874 /* Cell Tap */ = {
+		1487FD4B1B4F392C004E1874 /* EventMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell Tap" */;
+			buildConfigurationList = 1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMe" */;
 			buildPhases = (
+				99E216EBC61F0ED3E1E7CBAC /* Check Pods Manifest.lock */,
 				1487FD481B4F392C004E1874 /* Sources */,
 				1487FD491B4F392C004E1874 /* Frameworks */,
 				1487FD4A1B4F392C004E1874 /* Resources */,
+				2252C3DDCFC72C089FF34A6E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Cell Tap";
+			name = EventMe;
 			productName = "Cell Tap";
-			productReference = 1487FD4C1B4F392C004E1874 /* Cell Tap.app */;
+			productReference = 1487FD4C1B4F392C004E1874 /* EventMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1487FD601B4F392C004E1874 /* Cell TapTests */ = {
+		1487FD601B4F392C004E1874 /* EventMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell TapTests" */;
+			buildConfigurationList = 1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMeTests" */;
 			buildPhases = (
 				1487FD5D1B4F392C004E1874 /* Sources */,
 				1487FD5E1B4F392C004E1874 /* Frameworks */,
@@ -145,9 +214,9 @@
 			dependencies = (
 				1487FD631B4F392C004E1874 /* PBXTargetDependency */,
 			);
-			name = "Cell TapTests";
+			name = EventMeTests;
 			productName = "Cell TapTests";
-			productReference = 1487FD611B4F392C004E1874 /* Cell TapTests.xctest */;
+			productReference = 1487FD611B4F392C004E1874 /* EventMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "Cell Tap" */;
+			buildConfigurationList = 1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "EventMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,8 +250,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1487FD4B1B4F392C004E1874 /* Cell Tap */,
-				1487FD601B4F392C004E1874 /* Cell TapTests */,
+				1487FD4B1B4F392C004E1874 /* EventMe */,
+				1487FD601B4F392C004E1874 /* EventMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1487FD571B4F392C004E1874 /* Main.storyboard in Resources */,
+				1418D01F1B580FDE00F2386C /* Default-568h@2x.png in Resources */,
 				1487FD5C1B4F392C004E1874 /* LaunchScreen.xib in Resources */,
 				1487FD591B4F392C004E1874 /* Images.xcassets in Resources */,
 			);
@@ -207,13 +277,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2252C3DDCFC72C089FF34A6E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cell Tap/Pods-Cell Tap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99E216EBC61F0ED3E1E7CBAC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1487FD481B4F392C004E1874 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1487FD541B4F392C004E1874 /* ViewController.swift in Sources */,
-				1487FD521B4F392C004E1874 /* AppDelegate.swift in Sources */,
+				1430598A1B571207004C89DB /* MainViewController.swift in Sources */,
+				143059851B571207004C89DB /* AppDelegate.swift in Sources */,
+				143059871B571207004C89DB /* ConversationListViewController.swift in Sources */,
+				143059891B571207004C89DB /* LayerClient.swift in Sources */,
+				143059881B571207004C89DB /* ConversationViewController.swift in Sources */,
+				1430598B1B571207004C89DB /* ParticipantTableViewController.swift in Sources */,
+				1430598F1B571207004C89DB /* ViewController.swift in Sources */,
+				1430598C1B571207004C89DB /* PFUser+ATLParticipant.swift in Sources */,
+				143059841B571207004C89DB /* addEventViewController.swift in Sources */,
+				1430598D1B571207004C89DB /* profileViewController.swift in Sources */,
+				1430598E1B571207004C89DB /* UserManager.swift in Sources */,
+				143059861B571207004C89DB /* BlogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +343,7 @@
 /* Begin PBXTargetDependency section */
 		1487FD631B4F392C004E1874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1487FD4B1B4F392C004E1874 /* Cell Tap */;
+			target = 1487FD4B1B4F392C004E1874 /* EventMe */;
 			targetProxy = 1487FD621B4F392C004E1874 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -338,21 +451,28 @@
 		};
 		1487FD6C1B4F392C004E1874 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CCFFCAF58389C1C125E6FD1 /* Pods-Cell Tap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cell Tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EventMe;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cell Tap/Cell Tap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		1487FD6D1B4F392C004E1874 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D2E7E30A1313C6011D5D3CC /* Pods-Cell Tap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cell Tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EventMe;
+				SWIFT_OBJC_BRIDGING_HEADER = "Cell Tap/Cell Tap-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -370,7 +490,7 @@
 				);
 				INFOPLIST_FILE = "Cell TapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EventMeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell Tap.app/Cell Tap";
 			};
 			name = Debug;
@@ -385,7 +505,7 @@
 				);
 				INFOPLIST_FILE = "Cell TapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EventMeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell Tap.app/Cell Tap";
 			};
 			name = Release;
@@ -393,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "Cell Tap" */ = {
+		1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "EventMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD691B4F392C004E1874 /* Debug */,
@@ -402,21 +522,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell Tap" */ = {
+		1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD6C1B4F392C004E1874 /* Debug */,
 				1487FD6D1B4F392C004E1874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell TapTests" */ = {
+		1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD6F1B4F392C004E1874 /* Debug */,
 				1487FD701B4F392C004E1874 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

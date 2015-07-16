@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let LayerAppIDString: NSURL! = NSURL(string: "layer:///apps/staging/cebbcb50-29b7-11e5-9861-68bc460101a2")
+    let ParseAppIDString: String = "TN6zAxck5uARAxPlUBJHkj213my67BvzrBFrFD7f"
+    let ParseClientKeyString: String = "jsiAYUkWNQyquiGimaISxu6vysjyVNakrJHWAPB4"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        setupParse()
+        setupLayer()
         return true
     }
 
@@ -40,6 +44,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    func setupParse() {
+        // Enable Parse local data store for user persistence
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId(ParseAppIDString, clientKey: ParseClientKeyString)
+        
+        // Set default ACLs
+        let defaultACL: PFACL = PFACL()
+        defaultACL.setPublicReadAccess(true)
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
+    }
+    
+    func setupLayer() {
+        LayerClient.client = LYRClient(appID: LayerAppIDString)
+        LayerClient.client.autodownloadMaximumContentSize = 1024 * 100
+        LayerClient.client.autodownloadMIMETypes = NSSet(objects: "image/jpeg") as Set<NSObject>
+    }
+
 
 
 }
