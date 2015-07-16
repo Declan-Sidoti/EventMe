@@ -59,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LayerClient.client = LYRClient(appID: LayerAppIDString)
         LayerClient.client.autodownloadMaximumContentSize = 1024 * 100
         LayerClient.client.autodownloadMIMETypes = NSSet(objects: "image/jpeg") as Set<NSObject>
+        let client = LayerClient.client
     }
 
 

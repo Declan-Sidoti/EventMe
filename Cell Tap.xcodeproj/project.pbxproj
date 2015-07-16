@@ -51,12 +51,12 @@
 		143059811B571207004C89DB /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		143059821B571207004C89DB /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		143059831B571207004C89DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1487FD4C1B4F392C004E1874 /* EventMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1487FD4C1B4F392C004E1874 /* Cell Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cell Tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1487FD501B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487FD561B4F392C004E1874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1487FD581B4F392C004E1874 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1487FD5B1B4F392C004E1874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1487FD611B4F392C004E1874 /* EventMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1487FD611B4F392C004E1874 /* Cell TapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cell TapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1487FD661B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487FD671B4F392C004E1874 /* Cell_TapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell_TapTests.swift; sourceTree = "<group>"; };
 		14A9BA8F1B570F65005CA84B /* Cell Tap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cell Tap-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		1487FD4D1B4F392C004E1874 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1487FD4C1B4F392C004E1874 /* EventMe.app */,
-				1487FD611B4F392C004E1874 /* EventMeTests.xctest */,
+				1487FD4C1B4F392C004E1874 /* Cell Tap.app */,
+				1487FD611B4F392C004E1874 /* Cell TapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1487FD4B1B4F392C004E1874 /* EventMe */ = {
+		1487FD4B1B4F392C004E1874 /* Cell Tap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMe" */;
+			buildConfigurationList = 1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell Tap" */;
 			buildPhases = (
 				99E216EBC61F0ED3E1E7CBAC /* Check Pods Manifest.lock */,
 				1487FD481B4F392C004E1874 /* Sources */,
@@ -196,14 +196,14 @@
 			);
 			dependencies = (
 			);
-			name = EventMe;
+			name = "Cell Tap";
 			productName = "Cell Tap";
-			productReference = 1487FD4C1B4F392C004E1874 /* EventMe.app */;
+			productReference = 1487FD4C1B4F392C004E1874 /* Cell Tap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1487FD601B4F392C004E1874 /* EventMeTests */ = {
+		1487FD601B4F392C004E1874 /* Cell TapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMeTests" */;
+			buildConfigurationList = 1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell TapTests" */;
 			buildPhases = (
 				1487FD5D1B4F392C004E1874 /* Sources */,
 				1487FD5E1B4F392C004E1874 /* Frameworks */,
@@ -214,9 +214,9 @@
 			dependencies = (
 				1487FD631B4F392C004E1874 /* PBXTargetDependency */,
 			);
-			name = EventMeTests;
+			name = "Cell TapTests";
 			productName = "Cell TapTests";
-			productReference = 1487FD611B4F392C004E1874 /* EventMeTests.xctest */;
+			productReference = 1487FD611B4F392C004E1874 /* Cell TapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "EventMe" */;
+			buildConfigurationList = 1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "Cell Tap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -250,8 +250,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1487FD4B1B4F392C004E1874 /* EventMe */,
-				1487FD601B4F392C004E1874 /* EventMeTests */,
+				1487FD4B1B4F392C004E1874 /* Cell Tap */,
+				1487FD601B4F392C004E1874 /* Cell TapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,7 +343,7 @@
 /* Begin PBXTargetDependency section */
 		1487FD631B4F392C004E1874 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1487FD4B1B4F392C004E1874 /* EventMe */;
+			target = 1487FD4B1B4F392C004E1874 /* Cell Tap */;
 			targetProxy = 1487FD621B4F392C004E1874 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,7 +457,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cell Tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = EventMe;
+				PRODUCT_NAME = "Cell Tap";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cell Tap/Cell Tap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -471,7 +471,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Cell Tap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = EventMe;
+				PRODUCT_NAME = "Cell Tap";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cell Tap/Cell Tap-Bridging-Header.h";
 			};
 			name = Release;
@@ -490,7 +490,7 @@
 				);
 				INFOPLIST_FILE = "Cell TapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EventMeTests;
+				PRODUCT_NAME = "Cell TapTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell Tap.app/Cell Tap";
 			};
 			name = Debug;
@@ -505,7 +505,7 @@
 				);
 				INFOPLIST_FILE = "Cell TapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EventMeTests;
+				PRODUCT_NAME = "Cell TapTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cell Tap.app/Cell Tap";
 			};
 			name = Release;
@@ -513,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "EventMe" */ = {
+		1487FD471B4F392C004E1874 /* Build configuration list for PBXProject "Cell Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD691B4F392C004E1874 /* Debug */,
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMe" */ = {
+		1487FD6B1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell Tap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD6C1B4F392C004E1874 /* Debug */,
@@ -531,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "EventMeTests" */ = {
+		1487FD6E1B4F392C004E1874 /* Build configuration list for PBXNativeTarget "Cell TapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1487FD6F1B4F392C004E1874 /* Debug */,

@@ -24,6 +24,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         }
     }
+    @IBAction func logOut(sender: AnyObject) {
+        println("logOutButtonTapAction")
+        
+        LayerClient.client.deauthenticateWithCompletion { (success: Bool, error: NSError?) in
+            if error == nil {
+                PFUser.logOut()
+                self.navigationController!.popToRootViewControllerAnimated(true)
+            } else {
+                println("Failed to deauthenticate: \(error)")
+            }
+        }
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

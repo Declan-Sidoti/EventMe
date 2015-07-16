@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import CoreLocation
 class BlogViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+    @IBAction func messagesTapped(sender: AnyObject) {
+        let controller: ConversationListViewController = ConversationListViewController(layerClient: LayerClient.client)
+        self.navigationController!.pushViewController(controller, animated: true)
+    }
 
     @IBOutlet var myMap: MKMapView!
     var locationManager = CLLocationManager()

@@ -73,7 +73,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // Sent to the delegate when a PFUser is logged in.
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
-        self.loginLayer()
+        //self.loginLayer()
     }
 
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
@@ -114,7 +114,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     // Sent to the delegate when a PFUser is signed up.
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
-        self.loginLayer()
+        //self.loginLayer()
     }
 
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
@@ -125,7 +125,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     func logOutButtonTapAction(sender: AnyObject) {
         PFUser.logOut()
-        self.layerClient.deauthenticateWithCompletion { success, error in
+        LayerClient.client.deauthenticateWithCompletion { success, error in
             if (!success) {
                 println("Failed to deauthenticate: \(error)")
             } else {
@@ -144,7 +144,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         // Connect to Layer
         // See "Quick Start - Connect" for more details
         // https://developer.layer.com/docs/quick-start/ios#connect
-        self.layerClient.connectWithCompletion { success, error in
+        LayerClient.client.connectWithCompletion { success, error in
             if (!success) {
                 println("Failed to connect to Layer: \(error)")
             } else {
@@ -165,17 +165,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     func authenticateLayerWithUserID(userID: NSString, completion: ((success: Bool , error: NSError!) -> Void)!) {
         // Check to see if the layerClient is already authenticated.
-        if self.layerClient.authenticatedUserID != nil {
+        if LayerClient.client.authenticatedUserID != nil {
             // If the layerClient is authenticated with the requested userID, complete the authentication process.
-            if self.layerClient.authenticatedUserID == userID {
-                println("Layer Authenticated as User \(self.layerClient.authenticatedUserID)")
+            if LayerClient.client.authenticatedUserID == userID {
+                println("Layer Authenticated as User \(LayerClient.client.authenticatedUserID)")
                 if completion != nil {
                     completion(success: true, error: nil)
                 }
                 return
             } else {
                 //If the authenticated userID is different, then deauthenticate the current client and re-authenticate with the new userID.
-                self.layerClient.deauthenticateWithCompletion { (success: Bool, error: NSError!) in
+                LayerClient.client.deauthenticateWithCompletion { (success: Bool, error: NSError!) in
                     if error != nil {
                         self.authenticationTokenWithUserId(userID, completion: { (success: Bool, error: NSError?) in
                             if (completion != nil) {
@@ -203,7 +203,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         /*
         * 1. Request an authentication Nonce from Layer
         */
-        self.layerClient.requestAuthenticationNonceWithCompletion { (nonce: String!, error: NSError!) in
+        LayerClient.client.requestAuthenticationNonceWithCompletion { (nonce: String!, error: NSError!) in
             if (nonce.isEmpty) {
                 if (completion != nil) {
                     completion(success: false, error: error)
@@ -217,7 +217,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             PFCloud.callFunctionInBackground("generateToken", withParameters: ["nonce": nonce, "userID": userID]) { (object:AnyObject?, error: NSError?) -> Void in
                 if error == nil {
                     let identityToken = object as! String
-                    self.layerClient.authenticateWithIdentityToken(identityToken) { authenticatedUserID, error in
+                    LayerClient.client.authenticateWithIdentityToken(identityToken) { authenticatedUserID, error in
                         if (!authenticatedUserID.isEmpty) {
                             if (completion != nil) {
                                 completion(success: true, error: nil)
@@ -239,8 +239,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     func presentConversationListViewController() {
         SVProgressHUD.dismiss()
         
-        let controller: ConversationListViewController = ConversationListViewController(layerClient: self.layerClient)
-        self.navigationController!.pushViewController(controller, animated: true)
+//        let controller: MainViewController = MainViewController()
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+////        self.presentViewController(vc, animated: true, completion: nil)
+//        self.navigationController!.pushViewController(vc, animated: true)
+        performSegueWithIdentifier("showMainNav", sender: nil)
     }
     
     // MARK - Helper function
