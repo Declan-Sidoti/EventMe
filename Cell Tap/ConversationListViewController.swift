@@ -9,13 +9,16 @@ class ConversationListViewController: ATLConversationListViewController, ATLConv
         self.delegate = self
         
         self.navigationController!.navigationBar.tintColor = ATLBlueColor()
-        
-        let title = NSLocalizedString("Logout", comment: "")
-        let logoutItem = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.Plain, target: self, action: Selector("logoutButtonTapped:"))
-        self.navigationItem.setLeftBarButtonItem(logoutItem, animated: false)
 
         let composeItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Compose, target: self, action: Selector("composeButtonTapped:"))
         self.navigationItem.setRightBarButtonItem(composeItem, animated: false)
+        
+        let backItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("back:"))
+        self.navigationItem.setLeftBarButtonItem(backItem, animated: false)
+    }
+    
+    func back(sender: AnyObject?) {
+        navigationController?.popViewControllerAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,18 +98,5 @@ class ConversationListViewController: ATLConversationListViewController, ATLConv
         let controller = ConversationViewController(layerClient: self.layerClient)
         controller.displaysAddressBar = true
         self.navigationController!.pushViewController(controller, animated: true)
-    }
-
-    func logoutButtonTapped(sender: AnyObject) {
-        println("logOutButtonTapAction")
-        
-        self.layerClient.deauthenticateWithCompletion { (success: Bool, error: NSError?) in
-            if error == nil {
-                PFUser.logOut()
-                self.navigationController!.popToRootViewControllerAnimated(true)
-            } else {
-                println("Failed to deauthenticate: \(error)")
-            }
-        }
     }
 }
