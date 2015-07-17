@@ -20,6 +20,7 @@
 		1430598D1B571207004C89DB /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059811B571207004C89DB /* profileViewController.swift */; };
 		1430598E1B571207004C89DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059821B571207004C89DB /* UserManager.swift */; };
 		1430598F1B571207004C89DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143059831B571207004C89DB /* ViewController.swift */; };
+		144DEE331B59A252007A5636 /* ParseLoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DEE321B59A252007A5636 /* ParseLoginHelper.swift */; };
 		1487FD571B4F392C004E1874 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD551B4F392C004E1874 /* Main.storyboard */; };
 		1487FD591B4F392C004E1874 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD581B4F392C004E1874 /* Images.xcassets */; };
 		1487FD5C1B4F392C004E1874 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD5A1B4F392C004E1874 /* LaunchScreen.xib */; };
@@ -51,6 +52,7 @@
 		143059811B571207004C89DB /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		143059821B571207004C89DB /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		143059831B571207004C89DB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		144DEE321B59A252007A5636 /* ParseLoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseLoginHelper.swift; path = "../../Makestagram-Swift-Solution-StarterProject/Makestagram/Helpers/ParseLoginHelper.swift"; sourceTree = "<group>"; };
 		1487FD4C1B4F392C004E1874 /* Cell Tap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cell Tap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1487FD501B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487FD561B4F392C004E1874 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		1487FD4E1B4F392C004E1874 /* Cell Tap */ = {
 			isa = PBXGroup;
 			children = (
+				144DEE321B59A252007A5636 /* ParseLoginHelper.swift */,
 				143059781B571207004C89DB /* addEventViewController.swift */,
 				143059791B571207004C89DB /* AppDelegate.swift */,
 				1430597A1B571207004C89DB /* BlogViewController.swift */,
@@ -323,6 +326,7 @@
 				1430598B1B571207004C89DB /* ParticipantTableViewController.swift in Sources */,
 				1430598F1B571207004C89DB /* ViewController.swift in Sources */,
 				1430598C1B571207004C89DB /* PFUser+ATLParticipant.swift in Sources */,
+				144DEE331B59A252007A5636 /* ParseLoginHelper.swift in Sources */,
 				143059841B571207004C89DB /* addEventViewController.swift in Sources */,
 				1430598D1B571207004C89DB /* profileViewController.swift in Sources */,
 				1430598E1B571207004C89DB /* UserManager.swift in Sources */,

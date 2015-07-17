@@ -263,7 +263,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hos-s4-Z3p">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KIS-co-jbw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavBarController" automaticallyAdjustsScrollViewInsets="NO" id="KIS-co-jbw" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJl-K0-VSM">

@@ -7,6 +7,9 @@ pod 'LayerKit', '~> 0.15.0'
   pod 'Parse', '~> 1.7.5'
   pod 'ParseUI', '~> 1.1.4'
   pod 'SVProgressHUD', '~> 1.1.3'
+  pod 'ParseFacebookUtilsV4'
+
+pod 'FBSDKCoreKit'
 end
 
 target 'Cell TapTests' do

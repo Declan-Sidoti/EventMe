@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var tableView: UITableView!
+     var window: UIWindow?
     let blogSegueIdentifier = "ShowBlogSegue"
     let textCellIdentifier = "TextCell"
     let swiftBlogs = ["My Event", "Example Event", "My Other Event"]
@@ -31,6 +32,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if error == nil {
                 PFUser.logOut()
                 self.navigationController!.popToRootViewControllerAnimated(true)
+                // 3
             } else {
                 println("Failed to deauthenticate: \(error)")
             }
