@@ -1,0 +1,15 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Cell Tap' do
+pod 'LayerKit', '~> 0.15.0'
+  pod 'Atlas', '~> 1.0.8'
+  pod 'Parse', '~> 1.7.5'
+  pod 'ParseUI', '~> 1.1.4'
+  pod 'SVProgressHUD', '~> 1.1.3'
+end
+
+target 'Cell TapTests' do
+
+end
+

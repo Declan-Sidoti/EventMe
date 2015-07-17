@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Cell Tap-Atlas-AtlasResource.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap-Atlas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap-ParseUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Cell Tap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0F0A314EFC84C025BB97DDD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D78E9A58E1D40F556CDE8E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63DE1C85B93DAF1A8E327F42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>863EEBB1DFBF80DBB4A56F87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6761150775059E662077575</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E5D9BACD33B9C40701D7833C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8D6ED942A89C5CBB903CDA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A1967ECB-9155-4CF9-B7BE-78E1F0872ED4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Cell Tap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5AC0E54F3075150F88C1A92BA386A27BB155B345</key>
+		<string>https://github.com/Declan-Sidoti/EventMe.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Cell Tap.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5AC0E54F3075150F88C1A92BA386A27BB155B345</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Declan-Sidoti/EventMe.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5AC0E54F3075150F88C1A92BA386A27BB155B345</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5AC0E54F3075150F88C1A92BA386A27BB155B345</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cell%20Tap</string>
+		</dict>
+	</array>
+</dict>
+</plist>
