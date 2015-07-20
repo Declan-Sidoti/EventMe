@@ -28,10 +28,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>best Results</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>best results</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>best Results</string>
 	<key>FacebookAppID</key>
 	<string>1476797835951906</string>
 	<key>FacebookDisplayName</key>

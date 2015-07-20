@@ -1,14 +1,16 @@
 import UIKit
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+    var parseLoginHelper: ParseLoginHelper!
+    
     var layerClient = LayerClient.client
-    var logInViewController: PFLogInViewController!
-
+    var logInViewController: PFLogInViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -17,44 +19,33 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (PFUser.currentUser() != nil) {
-            self.loginLayer()
-            return
+        if PFUser.currentUser() == nil {
+            // 4
+            // Otherwise set the LoginViewController to be the first
+            parseLoginHelper = ParseLoginHelper {[unowned self] user, error in
+                // Initialize the ParseLoginHelper with a callback
+                if let error = error {
+                    // 1
+                } else  if let user = user {
+                    // if login was successful, display the TabBarController
+                    // 2
+                    self.loginLayer()
+                }
+            }
+            
+            logInViewController = PFLogInViewController()
+            logInViewController?.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
+            logInViewController?.delegate = parseLoginHelper
+            logInViewController?.signUpController?.delegate = parseLoginHelper
+            
+            navigationController?.presentViewController(logInViewController!, animated: true, completion: nil)
+        } else {
+                performSegueWithIdentifier("showMainNav", sender: nil)
         }
-        
-        // No user logged in
-        let signupButtonBackgroundImage: UIImage = getImageWithColor(ATLBlueColor(), size: CGSize(width: 10.0, height: 10.0))
-        
-        // Create the log in view controller
-        self.logInViewController = PFLogInViewController()
-        
-        self.logInViewController.logInView!.passwordForgottenButton!.setTitleColor(ATLBlueColor(), forState: UIControlState.Normal)
-        self.logInViewController.logInView!.signUpButton!.setBackgroundImage(signupButtonBackgroundImage, forState: UIControlState.Normal)
-        self.logInViewController.logInView!.signUpButton!.backgroundColor = ATLBlueColor()
-        self.logInViewController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        self.logInViewController.fields = (PFLogInFields.UsernameAndPassword |
-                                           PFLogInFields.LogInButton |
-                                           PFLogInFields.SignUpButton |
-                                           PFLogInFields.PasswordForgotten)
-        self.logInViewController.delegate = self
-        let logoImageView: UIImageView = UIImageView(image: UIImage(named:"LayerParseLogin"))
-        logoImageView.contentMode = UIViewContentMode.ScaleAspectFit
-        self.logInViewController.logInView!.logo = logoImageView;
-        
-        // Create the sign up view controller
-        let signUpViewController: PFSignUpViewController = PFSignUpViewController()
-        signUpViewController.signUpView!.signUpButton!.setBackgroundImage(signupButtonBackgroundImage, forState: UIControlState.Normal)
-        self.logInViewController.signUpController = signUpViewController
-        signUpViewController.delegate = self
-        let signupImageView: UIImageView = UIImageView(image: UIImage(named:"LayerParseLogin"))
-        signupImageView.contentMode = UIViewContentMode.ScaleAspectFit
-        signUpViewController.signUpView!.logo = signupImageView
-
-        self.presentViewController(self.logInViewController,  animated: true, completion:nil)
     }
-
+    
     // MARK - PFLogInViewControllerDelegate
-
+    
     // Sent to the delegate to determine whether the log in request should be submitted to the server.
     func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username:String, password: String) -> Bool {
         if (!username.isEmpty && !password.isEmpty) {
@@ -69,13 +60,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
         return false // Interrupt login process
     }
-
+    
     // Sent to the delegate when a PFUser is logged in.
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
         //self.loginLayer()
     }
-
+    
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
         if let description = error?.localizedDescription {
             let cancelButtonTitle = NSLocalizedString("OK", comment: "")
@@ -83,9 +74,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         }
         println("Failed to log in...")
     }
-
+    
     // MARK: - PFSignUpViewControllerDelegate
-
+    
     // Sent to the delegate to determine whether the sign up request should be submitted to the server.
     func signUpViewController(signUpController: PFSignUpViewController, shouldBeginSignUp info: [NSObject : AnyObject]) -> Bool {
         var informationComplete: Bool = true
@@ -110,19 +101,19 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
         return informationComplete;
     }
-
+    
     // Sent to the delegate when a PFUser is signed up.
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         self.dismissViewControllerAnimated(true, completion: nil)
         //self.loginLayer()
     }
-
+    
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
         println("Failed to sign up...")
     }
-
+    
     // MARK - IBActions
-
+    
     func logOutButtonTapAction(sender: AnyObject) {
         PFUser.logOut()
         LayerClient.client.deauthenticateWithCompletion { success, error in
@@ -133,14 +124,16 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
         
-        self.presentViewController(self.logInViewController, animated: true, completion: nil)
+        if let vc = logInViewController {
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
     }
-
+    
     // MARK - Layer Authentication Methods
-
+    
     func loginLayer() {
         SVProgressHUD.show()
-            
+        
         // Connect to Layer
         // See "Quick Start - Connect" for more details
         // https://developer.layer.com/docs/quick-start/ios#connect
@@ -162,7 +155,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
     }
-
+    
     func authenticateLayerWithUserID(userID: NSString, completion: ((success: Bool , error: NSError!) -> Void)!) {
         // Check to see if the layerClient is already authenticated.
         if LayerClient.client.authenticatedUserID != nil {
@@ -233,18 +226,18 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             }
         }
     }
-
+    
     // MARK - Present ATLPConversationListController
-
+    
     func presentConversationListViewController() {
         SVProgressHUD.dismiss()
         
-//        let controller: MainViewController = MainViewController()
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
-////        self.presentViewController(vc, animated: true, completion: nil)
-//        self.navigationController!.pushViewController(vc, animated: true)
-        performSegueWithIdentifier("showMainNav", sender: nil)
+        //        let controller: MainViewController = MainViewController()
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let vc = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        ////        self.presentViewController(vc, animated: true, completion: nil)
+        //        self.navigationController!.pushViewController(vc, animated: true)
+        logInViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK - Helper function

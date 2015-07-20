@@ -12,30 +12,11 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var parseLoginHelper: ParseLoginHelper!
     var window: UIWindow?
     let LayerAppIDString: NSURL! = NSURL(string: "layer:///apps/staging/cebbcb50-29b7-11e5-9861-68bc460101a2")
     let ParseAppIDString: String = "TN6zAxck5uARAxPlUBJHkj213my67BvzrBFrFD7f"
     let ParseClientKeyString: String = "jsiAYUkWNQyquiGimaISxu6vysjyVNakrJHWAPB4"
-
-    override init() {
-        super.init()
-        
-        parseLoginHelper = ParseLoginHelper {[unowned self] user, error in
-            // Initialize the ParseLoginHelper with a callback
-            if let error = error {
-                // 1
-            } else  if let user = user {
-                // if login was successful, display the TabBarController
-                // 2
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let tabBarController = storyboard.instantiateViewControllerWithIdentifier("NavBarController") as! UINavigationController
-                // 3
-                self.window?.rootViewController!.presentViewController(tabBarController, animated:true, completion:nil)
-            }
-        }
-    }
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         setupParse()
         setupLayer()
@@ -49,22 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let user = PFUser.currentUser()
         
         let startViewController: UIViewController;
-        
-        if (user != nil) {
-            // 3
-            // if we have a user, set the TabBarController to be the initial View Controller
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            startViewController = storyboard.instantiateViewControllerWithIdentifier("NavBarController") as! UINavigationController
-        } else {
-            // 4
-            // Otherwise set the LoginViewController to be the first
-            let loginViewController = PFLogInViewController()
-            loginViewController.fields = .UsernameAndPassword | .LogInButton | .SignUpButton | .PasswordForgotten | .Facebook
-            loginViewController.delegate = parseLoginHelper
-            loginViewController.signUpController?.delegate = parseLoginHelper
-            
-            startViewController = loginViewController
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        startViewController = storyboard.instantiateViewControllerWithIdentifier("NavBarController") as! UINavigationController
         
         // 5
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -83,17 +50,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
-
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
@@ -117,8 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LayerClient.client.autodownloadMaximumContentSize = 1024 * 100
         LayerClient.client.autodownloadMIMETypes = NSSet(objects: "image/jpeg") as Set<NSObject>
     }
-
-
-
+    
+    
+    
 }
 
