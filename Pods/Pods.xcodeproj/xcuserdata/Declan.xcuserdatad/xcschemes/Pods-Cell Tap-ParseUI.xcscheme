@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D93AA203837F6DFBD860A477"
+               BlueprintIdentifier = "4BAAD1DDB8B8E0E3438C1175"
                BuildableName = "libPods-Cell Tap-ParseUI.a"
                BlueprintName = "Pods-Cell Tap-ParseUI"
                ReferencedContainer = "container:Pods.xcodeproj">

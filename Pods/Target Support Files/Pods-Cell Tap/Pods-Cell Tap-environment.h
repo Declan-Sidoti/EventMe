@@ -65,14 +65,14 @@
 // This library does not follow semantic-versioning,
 // so we were not able to define version macros.
 // Please contact the author.
-// Version: 1.7.5.1.
+// Version: 1.7.5.3.
 
 // ParseFacebookUtilsV4
 #define COCOAPODS_POD_AVAILABLE_ParseFacebookUtilsV4
 // This library does not follow semantic-versioning,
 // so we were not able to define version macros.
 // Please contact the author.
-// Version: 1.7.5.1.
+// Version: 1.7.5.3.
 
 // ParseUI
 #define COCOAPODS_POD_AVAILABLE_ParseUI
