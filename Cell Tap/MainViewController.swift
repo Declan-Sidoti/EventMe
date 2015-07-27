@@ -12,10 +12,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 
     @IBOutlet var tableView: UITableView!
-     var window: UIWindow?
+    var photoTakingHelper: PhotoTakingHelper?
+    var window: UIWindow?
     let blogSegueIdentifier = "ShowBlogSegue"
     let textCellIdentifier = "TextCell"
     let swiftBlogs = ["My Event", "Example Event", "My Other Event"]
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == blogSegueIdentifier {
             if let destination = segue.destinationViewController as? BlogViewController{

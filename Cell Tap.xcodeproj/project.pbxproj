@@ -25,6 +25,7 @@
 		1487FD591B4F392C004E1874 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD581B4F392C004E1874 /* Images.xcassets */; };
 		1487FD5C1B4F392C004E1874 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1487FD5A1B4F392C004E1874 /* LaunchScreen.xib */; };
 		1487FD681B4F392C004E1874 /* Cell_TapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487FD671B4F392C004E1874 /* Cell_TapTests.swift */; };
+		14DEF1761B5F006B00FB0862 /* PhotoTakingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DEF1751B5F006B00FB0862 /* PhotoTakingHelper.swift */; };
 		B9CF007CEBF58D34270E3BEF /* libPods-Cell Tap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FC693D14F0AAB65629D396 /* libPods-Cell Tap.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		1487FD661B4F392C004E1874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1487FD671B4F392C004E1874 /* Cell_TapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell_TapTests.swift; sourceTree = "<group>"; };
 		14A9BA8F1B570F65005CA84B /* Cell Tap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cell Tap-Bridging-Header.h"; sourceTree = "<group>"; };
+		14DEF1751B5F006B00FB0862 /* PhotoTakingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTakingHelper.swift; sourceTree = "<group>"; };
 		6CCFFCAF58389C1C125E6FD1 /* Pods-Cell Tap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell Tap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cell Tap/Pods-Cell Tap.debug.xcconfig"; sourceTree = "<group>"; };
 		8D2E7E30A1313C6011D5D3CC /* Pods-Cell Tap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cell Tap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cell Tap/Pods-Cell Tap.release.xcconfig"; sourceTree = "<group>"; };
 		90FC693D14F0AAB65629D396 /* libPods-Cell Tap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cell Tap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				143059781B571207004C89DB /* addEventViewController.swift */,
 				143059791B571207004C89DB /* AppDelegate.swift */,
 				1430597A1B571207004C89DB /* BlogViewController.swift */,
+				14DEF1751B5F006B00FB0862 /* PhotoTakingHelper.swift */,
 				143059901B571242004C89DB /* Layer */,
 				1430597E1B571207004C89DB /* MainViewController.swift */,
 				143059811B571207004C89DB /* profileViewController.swift */,
@@ -323,6 +326,7 @@
 				143059871B571207004C89DB /* ConversationListViewController.swift in Sources */,
 				143059891B571207004C89DB /* LayerClient.swift in Sources */,
 				143059881B571207004C89DB /* ConversationViewController.swift in Sources */,
+				14DEF1761B5F006B00FB0862 /* PhotoTakingHelper.swift in Sources */,
 				1430598B1B571207004C89DB /* ParticipantTableViewController.swift in Sources */,
 				1430598F1B571207004C89DB /* ViewController.swift in Sources */,
 				1430598C1B571207004C89DB /* PFUser+ATLParticipant.swift in Sources */,
